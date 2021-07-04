@@ -1,0 +1,6 @@
+module Pods_FaceTrip_FaceTripTests {
+  umbrella header "Pods-FaceTrip-FaceTripTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
