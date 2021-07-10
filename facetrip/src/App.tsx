@@ -5,7 +5,7 @@ import { StatusBar } from 'react-native';
 import Navigator from '~/Screens/Navigator';
 
 const Container = Styled.SafeAreaView`
-  flex: 1; */
+  flex: 1;
 `;
 
 interface Props {}

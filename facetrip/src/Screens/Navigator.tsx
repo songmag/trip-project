@@ -7,6 +7,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Home from '~/Screens/Home';
 import MyInfo from '~/Screens/MyInfo';
 import Chat from '~/Screens/Chat';
+import PersonalChat from '~/Screens/PersonalChat';
 
 const Stack = createStackNavigator();
 const BottomTab = createBottomTabNavigator();
@@ -33,6 +34,7 @@ const ChatTab = () => {
   return (
     <Stack.Navigator screenOptions={{headerShown: false}}>
       <Stack.Screen name="Chat" component={Chat}/>
+      {/* <Stack.Screen name="PersonalChat" component={PersonalChat}/> */}
     </Stack.Navigator>
   );
 };
@@ -68,7 +70,7 @@ const MainNavigator = () => {
             focused ?
             <Image
               source={require('~/Assets/Images/identity.png')}
-              style={{ width: 30, height: 30, tintColor: '#20d9d8'}}/> :
+              style={{ width: 40, height: 40, tintColor: '#20d9d8'}}/> :
             <Image 
               source={require('~/Assets/Images/identity.png')}
               style={{ width: 25, height: 25, tintColor: '#000000'}}/>
