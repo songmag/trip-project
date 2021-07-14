@@ -5,7 +5,8 @@ import {createStackNavigator} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 import Home from '~/Screens/Home';
-import MyInfo from '~/Screens/MyInfo';
+// import MyInfo from '~/Screens/UserInfo';
+import Info from '~/Screens/Info';
 import Chat from '~/Screens/Chat';
 import PersonalChat from '~/Screens/PersonalChat';
 
@@ -34,7 +35,7 @@ const ChatTab = () => {
   return (
     <Stack.Navigator screenOptions={{headerShown: false}}>
       <Stack.Screen name="Chat" component={Chat}/>
-      {/* <Stack.Screen name="PersonalChat" component={PersonalChat}/> */}
+      <Stack.Screen name="PersonalChat" component={PersonalChat}/>
     </Stack.Navigator>
   );
 };
@@ -64,7 +65,7 @@ const MainNavigator = () => {
       />
       <BottomTab.Screen
         name="MyInfo"
-        component={MyInfoTab}
+        component={Info}
         options={{
           tabBarIcon: ({focused}) => (
             focused ?

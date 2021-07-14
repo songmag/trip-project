@@ -1,6 +1,5 @@
 import React from 'react';
 import Styled from 'styled-components/native';
-
 import {Image} from 'react-native';
 
 const Container = Styled.TouchableOpacity`
@@ -40,10 +39,10 @@ const LastTalkText = Styled.Text`
 `;
 
 interface Props {
-  color?: string
+  color?: string;
 }
 
-const ChattingShowComponent = ({color}: Props) => {
+const ChattingShowComponent = ({}: Props) => {
   return (
     <Container onPress={() => {
       console.log("click");

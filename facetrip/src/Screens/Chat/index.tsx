@@ -1,8 +1,8 @@
 import React from 'react';
 import { Keyboard, ScrollView } from 'react-native';
 import Styled from 'styled-components/native';
-
 import SeachBar from '~/Components/SearchBarComponent';
+
 import ChattingShowComponent from '~/Components/ChattShowComponent';
 
 const KeyContainer = Styled.TouchableWithoutFeedback`
