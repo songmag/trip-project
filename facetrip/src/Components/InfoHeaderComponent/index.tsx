@@ -8,6 +8,8 @@ const Container = Styled.View`
 
   width: 100%;
   height: 80px;
+
+  padding: 0 20px;
 `;
 
 const HeaderText = Styled.Text`
@@ -36,7 +38,7 @@ const InfoHeaderComponent = ({setSegment}: Props) => {
     <Container>
       <Image 
         source={require('~/Assets/Images/identity.png')}
-        style={{flex: 1, width: "100%", height: "100%", resizeMode: "contain"}}/>
+        style={{flex: 1, width: "100%", height: "100%", resizeMode: "cover"}}/>
       <HeaderText>Me</HeaderText>
       <ToggleSwitchContainer>
         <SegmentedControl

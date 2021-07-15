@@ -5,14 +5,15 @@ import {Image} from 'react-native';
 const Container = Styled.View`
   width: 90%;
   height: 60px;
-  margin: 0 5%;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 
   border: 1px solid black;
   border-radius: 10px;
-  margin-bottom: 10px;
+  margin: 10px 0 10px 5%;
+
+  background-color: white;
 `;
 
 const IconContainer = Styled.View`

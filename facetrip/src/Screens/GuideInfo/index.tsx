@@ -8,6 +8,7 @@ import HomeStay from '~/Screens/HomeStay';
 
 const Container = Styled.ScrollView`
   flex: 1;
+  background-color: white;
   padding: 0 20px;
 `;
 

@@ -4,6 +4,7 @@ import { Image } from 'react-native';
 
 const Container = Styled.View`
   flex: 1;
+  background-color: white;
 `;
 
 const LogoContainer = Styled.View`

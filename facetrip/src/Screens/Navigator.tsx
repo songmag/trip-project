@@ -26,7 +26,7 @@ const HomeTab = () => {
 const MyInfoTab = () => {
   return (
     <Stack.Navigator screenOptions={{headerShown: false}}>
-      <Stack.Screen name="MyInfo" component={MyInfo}/>
+      <Stack.Screen name="MyInfo" component={Info}/>
     </Stack.Navigator>
   );
 };
@@ -34,8 +34,14 @@ const MyInfoTab = () => {
 const ChatTab = () => {
   return (
     <Stack.Navigator screenOptions={{headerShown: false}}>
-      <Stack.Screen name="Chat" component={Chat}/>
-      <Stack.Screen name="PersonalChat" component={PersonalChat}/>
+      <Stack.Screen 
+        name="Chat"
+        component={Chat}
+        options={{headerShown: false, title: "이전"}}/>
+      <Stack.Screen 
+        name="PersonalChat"
+        component={PersonalChat}
+        options={{headerShown: true, title: "채팅"}}/>
     </Stack.Navigator>
   );
 };
@@ -45,7 +51,7 @@ const MainNavigator = () => {
     <BottomTab.Navigator
       tabBarOptions={{
         showLabel: false,
-        style: {height: "10%"},
+        style: {height: "10%", borderTopColor: "black"},
         }}>
       {/* showLabel : tabbar를 위한 label을 보여줄 것인지 설정 / default = true */}
       <BottomTab.Screen

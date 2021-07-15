@@ -6,6 +6,7 @@ import OppMessageComponent from '~/Components/OppMessageComponent';
 
 const Container = Styled.ScrollView`
   flex: 1;
+  background-color: white;
 `;
 
 const PersonalChat = () => {

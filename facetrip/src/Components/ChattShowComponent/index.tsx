@@ -1,6 +1,8 @@
 import React from 'react';
 import Styled from 'styled-components/native';
 import {Image} from 'react-native';
+// import { NavigationProp } from '@react-navigation/native';
+import {StackNavigationProp} from '@react-navigation/stack';
 
 const Container = Styled.TouchableOpacity`
   flex-direction: row;
@@ -38,14 +40,17 @@ const LastTalkText = Styled.Text`
   flex: 1;
 `;
 
+type NavigationProp = StackNavigationProp<ChattingNaviParam,'PersonalChat'>
+
 interface Props {
   color?: string;
+  navigation: NavigationProp;
 }
 
-const ChattingShowComponent = ({}: Props) => {
+const ChattingShowComponent = ({navigation}: Props) => {
   return (
     <Container onPress={() => {
-      console.log("click");
+      navigation.navigate("PersonalChat");
     }} style={{backgroundColor: "white"}}>
       <ImageContainer>
         <Image source={require("~/Assets/Images/JJangu.png")} style={{flex: 1, width: "100%", height: "100%", resizeMode: "contain"}}/>

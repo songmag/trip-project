@@ -6,6 +6,7 @@ import DescriptionComponent from '~/Components/DescriptionComponent';
 
 const Container = Styled.View`
   flex: 1;
+  background-color: white;
 `;
 
 const HomeStay = () => {
