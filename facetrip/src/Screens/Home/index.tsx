@@ -2,26 +2,17 @@ import React from 'react';
 import Styled from 'styled-components/native';
 import { Image } from 'react-native';
 
+import HeaderComponent from '~/Components/HeaderComponent';
+
 const Container = Styled.View`
   flex: 1;
   background-color: white;
 `;
 
-const LogoContainer = Styled.View`
-  width: 100%;
-  height: 80px;
-  background-color: #f1d475;
-`;
-
-const LogoImage = Styled.Image``
-
 const Home = () => {
   return (
     <Container>
-      <LogoContainer>
-        {/* <LogoImage source={require('~/Assets/Images/language.png')}/> */}
-        {/* 로고 들어갈 자리 */}
-      </LogoContainer>
+      <HeaderComponent imagePath={require('~/Assets/Images/logoReplacement.png')} headerTitle={"로고 위치"}/>
     </Container>
   );
 };

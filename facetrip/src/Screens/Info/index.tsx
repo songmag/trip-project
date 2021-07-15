@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import Styled from 'styled-components/native';
 
-import InfoHeaderComponent from '~/Components/InfoHeaderComponent';
+import HeaderComponent from '~/Components/HeaderComponent';
 import UserInfo from '~/Screens/UserInfo';
 import GuideInfo from '~/Screens/GuideInfo';
 
@@ -13,14 +13,15 @@ const Container = Styled.View`
 
 const Info = () => {
   const [selectSegmentIdx, setSelectSegmentIdx] = useState<number>(0);
+  const segmentList: Array<string> = ["User", "Guide"];
 
-  const getSegmentIdx = (idx: number) => {
+  const setSegmentIdx = (idx: number) => {
     setSelectSegmentIdx(idx);
   };
 
   return (
     <Container>
-      <InfoHeaderComponent setSegment={getSegmentIdx}/>
+      <HeaderComponent imagePath={require('~/Assets/Images/identity.png')} headerTitle={"Me"} segmentList={segmentList} selectedSegmentIdx={selectSegmentIdx} setSegmentIdx={setSegmentIdx}/>
       {selectSegmentIdx === 0 ? <UserInfo/> : <GuideInfo/>}
     </Container>
   );
