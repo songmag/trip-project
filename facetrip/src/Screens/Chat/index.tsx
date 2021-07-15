@@ -7,6 +7,7 @@ import SeachBarComponent from '~/Components/SearchBarComponent';
 import ChattingShowComponent from '~/Components/ChattShowComponent';
 // import { NavigationProp } from '@react-navigation/native';
 
+
 const KeyContainer = Styled.TouchableWithoutFeedback`
   flex: 1;
 `;

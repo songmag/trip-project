@@ -14,6 +14,7 @@ const Container = Styled.View`
   margin: 10px 0 10px 5%;
 
   background-color: white;
+
 `;
 
 const IconContainer = Styled.View`

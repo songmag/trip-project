@@ -8,6 +8,7 @@ import GuideInfo from '~/Screens/GuideInfo';
 const Container = Styled.View`
   flex: 1;
   background-color: white;
+
 `;
 
 const Info = () => {
