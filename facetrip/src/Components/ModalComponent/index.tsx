@@ -44,9 +44,9 @@ const CancelButton = Styled.TouchableOpacity`
   width: 80%;
   height: 50px;
   
-  background-color: #99cddf;
+  background-color: #0ffff8;
 
-  border: 1px solid #99cddf;
+  border: 1px solid #0ffff8;
   border-radius: 10px;
 
   align-self: center;
