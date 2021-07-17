@@ -67,3 +67,4 @@ const DescriptionComponent = ({title, contents, style}: Props) => {
 };
 
 export default DescriptionComponent;
+// 수정각
