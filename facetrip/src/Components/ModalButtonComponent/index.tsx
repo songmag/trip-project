@@ -35,7 +35,6 @@ interface Props {
 
 const ModalButtonComponent = ({style, modalTitle, selectedItem}: Props) => {
   const [isSelected, setIsSelected] = useState<boolean>(false);
-
   const closeModal = () => {
     setIsSelected(false);
   }
