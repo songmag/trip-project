@@ -28,9 +28,9 @@ const ListContainer = Styled.View`
 `;
 
 const Home = () => {
-  const [selectArea, setSelectArea] = useState<Array<String>>([]);
+  const [selectedArea, setSelectArea] = useState<Array<string>>([]);
   // 현재 선택된 Area
-  const [selectLanguage, setSelectLanguage] = useState<string | undefined>(undefined);
+  const [selectedLanguage, setSelectedLanguage] = useState<Array<string>>([]);
   // 현재 선택된 Language
 
   return (
@@ -42,14 +42,16 @@ const Home = () => {
             modalTitle={"지역 검색"}
             style={{
               flex: 1,
-              alignItems: "flex-start"
-            }}/>
+              alignItems: "flex-start",
+            }}
+            selectedItem={selectedArea}/>
           <ModalButtonComponent
             modalTitle={"사용 언어"}
             style={{
               flex: 1,
               alignItems: "flex-end"
-            }}/>
+            }}
+            selectedItem={selectedLanguage}/>
         </ModalContainer>
         <FilterBoardComponent/>
       </FilterContainer>
