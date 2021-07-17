@@ -1,10 +1,12 @@
 import React, {useState} from 'react';
 import Styled from 'styled-components/native';
-import { Image } from 'react-native';
+// import { Image } from 'react-native';
 
 import HeaderComponent from '~/Components/HeaderComponent';
 import ModalButtonComponent from '~/Components/ModalButtonComponent';
 import FilterBoardComponent from '~/Components/FilterBoardComponent';
+import StayListComponent from '~/Components/StayListComponent';
+
 
 const Container = Styled.View`
   flex: 1;
@@ -55,7 +57,7 @@ const Home = () => {
         </ModalContainer>
         <FilterBoardComponent/>
       </FilterContainer>
-      <ListContainer/>
+      <StayListComponent/>
     </Container>
   );
 };
