@@ -30,15 +30,12 @@ const ModalButtonText = Styled.Text`
 interface Props {
   style: object;
   modalTitle: string;
+  selectedItem: Array<string>;
 }
 
-const ModalButtonComponent = ({style, modalTitle}: Props) => {
-  // const [areaSelectModal, setAreaSelectModal] = useState<boolean>(false);
+const ModalButtonComponent = ({style, modalTitle, selectedItem}: Props) => {
   const [isSelected, setIsSelected] = useState<boolean>(false);
 
-  // const closeModal = () => {
-  //   setAreaSelectModal(false);
-  // }
   const closeModal = () => {
     setIsSelected(false);
   }
