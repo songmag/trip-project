@@ -1,15 +1,23 @@
 import React from 'react';
 import Styled from 'styled-components/native';
 
+import StayItemComponent from '~/Components/StayItemComponent';
+
 const Container = Styled.ScrollView`
   flex: 1;
   width: 100%;
-  background-color: red;
 `;
 
 const StayListComponent = () => {
   return (
-    <Container></Container>
+    <Container bounces={false}>
+      <StayItemComponent/>
+      <StayItemComponent/>
+      <StayItemComponent/>
+      <StayItemComponent/>
+      <StayItemComponent/>
+      <StayItemComponent/>
+    </Container>
   );
 };
 

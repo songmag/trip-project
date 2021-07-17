@@ -42,8 +42,10 @@ const DescriptionComponent = ({title, contents, style}: Props) => {
   return (
     <Container style={style}>
       <TitleText>{title}</TitleText>
+      {/* <ContentsText>{contents}</ContentsText> */}
       {title !== "Language" ? 
-        <ContentsText style={style}>{contents}</ContentsText> 
+        // <ContentsText style={style}>{contents}</ContentsText> 
+        <ContentsText>{contents}</ContentsText>
         : 
         <LanguageContainer>
           <UserLanguages>

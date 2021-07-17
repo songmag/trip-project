@@ -25,10 +25,6 @@ const ModalContainer = Styled.View`
   flex-direction: row;
 `;
 
-const ListContainer = Styled.View`
-  flex: 1;
-`;
-
 const Home = () => {
   const [selectedArea, setSelectArea] = useState<Array<string>>([]);
   // 현재 선택된 Area
