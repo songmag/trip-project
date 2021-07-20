@@ -2,10 +2,23 @@ import React from 'react';
 import Styled from 'styled-components/native';
 
 const Container = Styled.View`
+  flex-direction: row;
+  height: 20px;
+  margin-bottom: 10px;
+`;
+
+const LanguageText = Styled.Text`
+  flex : 1;
+  height: 100%;
+  padding-left: 5px;
+  font-weight: bold;
+`;
+
+const TotalPercentageContainer = Styled.View`
   flex: 2;
   height: 100%;
   background-color: #e2e2e2;
-  border-radius: 10px;  
+  border-radius: 10px;
 `;
 
 const PercentageContainer = Styled.View`
@@ -14,14 +27,18 @@ const PercentageContainer = Styled.View`
 `;
 
 interface Props {
+  language: string;
   color: string;
   percentage: string;
 }
 
-const ProgressBarComponent = ({color, percentage}: Props) => {
+const ProgressBarComponent = ({language, color, percentage}: Props) => {
   return (
     <Container>
-      <PercentageContainer style={{width: percentage, backgroundColor: color}}/>
+      <LanguageText>{language}</LanguageText>
+      <TotalPercentageContainer>
+        <PercentageContainer style={{width: percentage, backgroundColor: color}}/>
+      </TotalPercentageContainer>
     </Container>
   );
 };
