@@ -4,7 +4,7 @@ import Styled from 'styled-components/native';
 import ModalComponent from '~/Components/ModalComponent';
 
 const Container = Styled.View`
-  justify-content: center;
+  /* justify-content: center; */
 `;
 
 const ModalContainer = Styled.Modal``;
@@ -30,10 +30,10 @@ const ModalButtonText = Styled.Text`
 interface Props {
   style: object;
   modalTitle: string;
-  selectedItem: Array<string>;
+  // selectedItem: Array<string>;
 }
 
-const ModalButtonComponent = ({style, modalTitle, selectedItem}: Props) => {
+const ModalButtonComponent = ({style, modalTitle}: Props) => {
   const [isSelected, setIsSelected] = useState<boolean>(false);
   const closeModal = () => {
     setIsSelected(false);

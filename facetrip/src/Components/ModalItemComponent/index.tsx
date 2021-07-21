@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import Styled from 'styled-components/native';
 
 const Container = Styled.View`
-  flex: 1;
   width: 100%;
   padding-bottom: 10px;
 `;
