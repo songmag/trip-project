@@ -21,10 +21,13 @@ const DescriptionContainer = Styled.View`
   /* background-color: green; */
 `;
 
+interface Props {
+  pushToShowGuide: () => void;
+}
 
-const StayItemComponent = () => {
+const StayItemComponent = ({pushToShowGuide}: Props) => {
   return (
-    <Container>
+    <Container onPress={pushToShowGuide}>
       <Image source={require('~/Assets/Images/host2.png')} style={{flex: 1, width: "100%", height: "50%", resizeMode: "contain", justifyContent: "center", alignSelf: "center"}}/>
       <DescriptionContainer>
         <DescriptionComponent title={"Name"} style={{flexDirection: "row", width: "90%", alignSelf: "center", justifyContent: "space-between", }} contents={"짱구"}/>

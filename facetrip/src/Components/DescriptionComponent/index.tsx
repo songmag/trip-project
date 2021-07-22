@@ -9,11 +9,9 @@ const Container = Styled.View`
 const TitleText = Styled.Text`
   font-size: 15px;
   font-weight: bold;
-  /* padding: 5px 0; */
 `;
 
 const ContentsText = Styled.Text`
-  /* padding: 5px 0; */
 `;
 
 interface Props {

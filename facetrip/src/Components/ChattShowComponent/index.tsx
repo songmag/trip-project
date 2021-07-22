@@ -3,6 +3,7 @@ import Styled from 'styled-components/native';
 import {Image} from 'react-native';
 // import { NavigationProp } from '@react-navigation/native';
 import {StackNavigationProp} from '@react-navigation/stack';
+
 const Container = Styled.TouchableOpacity`
   flex-direction: row;
   width: 90%;

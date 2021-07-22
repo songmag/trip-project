@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
 import Styled from 'styled-components/native';
+import {StackNavigationProp} from '@react-navigation/stack';
 
 import HeaderComponent from '~/Components/HeaderComponent';
 import FilterComponent from '~/Components/FilterComponent';
-import StayListComponent from '~/Components/StayListComponent';
+import GuideListComponent from '~/Components/GuideListComponent';
 
 
 const Container = Styled.View`
@@ -11,7 +12,13 @@ const Container = Styled.View`
   background-color: white;
 `;
 
-const Home = () => {
+type NavigationProp = StackNavigationProp<ShowGuideNaviParam, 'ShowGuide'>
+
+interface Props {
+  navigation: NavigationProp;
+}
+
+const Home = ({navigation}: Props) => {
   const [selectedArea, setSelectArea] = useState<Object>({});
   const [selectedLanguage, setSelectedLanguage] = useState<Array<string>>([]);
   // 현재 선택된 Language
@@ -32,7 +39,7 @@ const Home = () => {
         selectLanguage={selectedLanguage}
         setSelectAreaPropFunction={setSelectAreaPropFunction}
         setSelectLanguagePropFunction={setSelectLanguagePropFunction}/>
-      <StayListComponent/>
+      <GuideListComponent navigation={navigation}/>
     </Container>
   );
 };

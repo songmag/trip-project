@@ -5,7 +5,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 import Home from '~/Screens/Home';
-// import MyInfo from '~/Screens/UserInfo';
+import ShowGuide from '~/Screens/ShowGuide';
 import Info from '~/Screens/Info';
 import Chat from '~/Screens/Chat';
 import PersonalChat from '~/Screens/PersonalChat';
@@ -18,7 +18,15 @@ const HomeTab = () => {
     <Stack.Navigator screenOptions={{headerShown: false}}>
       {/* headerShown : 헤더를 보여줄 것인지 숨길 것인지 and Navigator에 적용하면 하위 모든 컴포넌트에 적용 */}
       {/*               Screen에 적용하면 해당 컴포넌트에만 적용 */}
-      <Stack.Screen name="Home" component={Home}/>
+      <Stack.Screen
+        name="Home"
+        component={Home}
+        options={{headerShown: false, title: "이전"}}/>
+      <Stack.Screen
+        name="ShowGuide"
+        component={ShowGuide}
+        options={{headerShown: true, title: "가이드"}}
+      />
     </Stack.Navigator>
   );
 };
