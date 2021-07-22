@@ -2,10 +2,6 @@ import React, {useState} from 'react';
 import Styled from 'styled-components/native';
 
 const Container = Styled.View`
-<<<<<<< HEAD
-=======
-  flex: 1;
->>>>>>> a44c5b60 ([2021-07-16] FaceTrip)
   width: 100%;
   padding-bottom: 10px;
 `;
