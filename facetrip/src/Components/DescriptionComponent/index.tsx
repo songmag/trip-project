@@ -24,32 +24,8 @@ interface Props {
 const DescriptionComponent = ({title, contents, style, titleStyle}: Props) => {
   return (
     <Container style={style}>
-<<<<<<< HEAD
-      <TitleText>{title}</TitleText>
-      {/* <ContentsText>{contents}</ContentsText> */}
-      {title !== "Language" ? 
-        // <ContentsText style={style}>{contents}</ContentsText> 
-        <ContentsText>{contents}</ContentsText>
-        : 
-        <LanguageContainer>
-          <UserLanguages>
-            <UserLanguageText>Korean</UserLanguageText>
-            <ProgressBarComponent color={"#91ed71"} percentage={"75%"}/>
-          </UserLanguages>
-          <UserLanguages>
-            <UserLanguageText>English</UserLanguageText>
-            <ProgressBarComponent color={"#91ed71"} percentage={"40%"}/>
-          </UserLanguages>
-          <UserLanguages>
-            <UserLanguageText>Chinese</UserLanguageText>
-            <ProgressBarComponent color={"#91ed71"} percentage={"90%"}/>
-          </UserLanguages>
-        </LanguageContainer>
-      }
-=======
       <TitleText style={titleStyle}>{title}</TitleText>
       <ContentsText>{contents}</ContentsText>
->>>>>>> rn
     </Container>
   );
 };
