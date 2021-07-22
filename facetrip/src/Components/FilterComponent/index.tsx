@@ -99,7 +99,7 @@ const FilterComponent = ({selectArea, selectLanguage, setSelectAreaPropFunction,
             changeModal(3);
             openModal();
           }}>
-            <ModalButtonText>지역선택</ModalButtonText>
+            <ModalButtonText>언어선택</ModalButtonText>
           </ModalButton>
         </ModalButtonContainer>
       </ModalContainer>

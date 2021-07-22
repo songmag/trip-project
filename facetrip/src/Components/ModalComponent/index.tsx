@@ -13,7 +13,6 @@ const Container = Styled.SafeAreaView`
 
 const ListContainer = Styled.View`
   flex: 1;
-  /* height: 100%; */
 `;
 
 const RegisterButton = Styled.TouchableOpacity`
@@ -31,18 +30,12 @@ const RegisterButton = Styled.TouchableOpacity`
   margin: 10px 0;
 `;
 
-const RegisterText = Styled.Text`
-  font-weight: bold;
-  font-size: 15px;
-`;
-
 const CancelButton = Styled.TouchableOpacity`
   width: 80%;
   height: 50px;
   
   background-color: #0ffff8;
 
-  border: 1px solid #0ffff8;
   border-radius: 10px;
 
   align-self: center;
@@ -51,9 +44,10 @@ const CancelButton = Styled.TouchableOpacity`
   margin-bottom: 10px;
 `;
 
-const CancelText = Styled.Text`
+const ButtonText = Styled.Text`
   font-weight: bold;
   font-size: 15px;
+
 `;
 
 interface Props {
@@ -101,7 +95,7 @@ const ModalComponent = ({closeModal, changeModal, saveSelectedItem, getModalNumb
           closeModal();
         }
       }}>
-        <RegisterText>선택완료</RegisterText>
+        <ButtonText>선택완료</ButtonText>
       </RegisterButton>
       <CancelButton onPress={() => {
         if(getModalNumber() == 1 || getModalNumber() == 3) {
@@ -110,7 +104,7 @@ const ModalComponent = ({closeModal, changeModal, saveSelectedItem, getModalNumb
           changeModal(1);
         }
       }}>
-        <CancelText>되돌아가기</CancelText>
+        <ButtonText>되돌아가기</ButtonText>
       </CancelButton>
     </Container>
   );
