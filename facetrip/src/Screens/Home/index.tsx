@@ -1,11 +1,10 @@
 import React, {useState} from 'react';
 import Styled from 'styled-components/native';
-// import { Image } from 'react-native';
+import {StackNavigationProp} from '@react-navigation/stack';
 
 import HeaderComponent from '~/Components/HeaderComponent';
-import ModalButtonComponent from '~/Components/ModalButtonComponent';
-import FilterBoardComponent from '~/Components/FilterBoardComponent';
-import StayListComponent from '~/Components/StayListComponent';
+import FilterComponent from '~/Components/FilterComponent';
+import GuideListComponent from '~/Components/GuideListComponent';
 
 
 const Container = Styled.View`
@@ -13,47 +12,40 @@ const Container = Styled.View`
   background-color: white;
 `;
 
-const FilterContainer = Styled.View`
-  width: 100%;
-  height: 150px;
-  align-items: center;
-`;
+type NavigationProp = StackNavigationProp<ShowGuideNaviParam, 'ShowGuide'>
 
-const ModalContainer = Styled.View`
-  flex: 1;
-  width: 90%;
-  flex-direction: row;
-`;
-
+<<<<<<< HEAD
 const Home = () => {
   const [selectedArea, setSelectArea] = useState<Array<string>>([]);
   // 현재 선택된 Area
+=======
+interface Props {
+  navigation: NavigationProp;
+}
+
+const Home = ({navigation}: Props) => {
+  const [selectedArea, setSelectArea] = useState<Object>({});
+>>>>>>> rn
   const [selectedLanguage, setSelectedLanguage] = useState<Array<string>>([]);
   // 현재 선택된 Language
+
+  const setSelectAreaPropFunction = (selectItem: Object) => {
+    setSelectArea(selectItem);
+  }
+
+  const setSelectLanguagePropFunction = (selectItem: Array<string>) => {
+    setSelectedLanguage(selectItem);
+  }
 
   return (
     <Container>
       <HeaderComponent imagePath={require('~/Assets/Images/logoReplacement.png')} headerTitle={"로고 위치"}/>
-      <FilterContainer>
-        <ModalContainer>
-          <ModalButtonComponent
-            modalTitle={"지역 검색"}
-            style={{
-              flex: 1,
-              alignItems: "flex-start",
-            }}
-            selectedItem={selectedArea}/>
-          <ModalButtonComponent
-            modalTitle={"사용 언어"}
-            style={{
-              flex: 1,
-              alignItems: "flex-end"
-            }}
-            selectedItem={selectedLanguage}/>
-        </ModalContainer>
-        <FilterBoardComponent/>
-      </FilterContainer>
-      <StayListComponent/>
+      <FilterComponent
+        selectArea ={selectedArea}
+        selectLanguage={selectedLanguage}
+        setSelectAreaPropFunction={setSelectAreaPropFunction}
+        setSelectLanguagePropFunction={setSelectLanguagePropFunction}/>
+      <GuideListComponent navigation={navigation}/>
     </Container>
   );
 };

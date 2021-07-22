@@ -30,7 +30,7 @@ const ImageSliderButton = Styled.TouchableOpacity`
 `;
 
 interface Props {
-  message: String;
+  message ?: String;
 }
 
 const ImageSliderComponent = ({message}: Props) => {

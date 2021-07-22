@@ -8,6 +8,7 @@ const Container = Styled.View`
   flex-direction: row;
 
   padding-left: 5px;
+  margin-top: 3%
   justify-content: space-between;
 `;
 
@@ -24,12 +25,13 @@ const CheckboxDescription = Styled.Text`
 
 interface Props {
   checked: boolean;
+  style?: object;
   onPress: () => void;
 }
 
-const CheckboxComponent = ({checked, onPress}: Props) => {
+const CheckboxComponent = ({checked, style, onPress}: Props) => {
   return (
-    <Container>
+    <Container style={style}>
       <CheckboxContainer onPress={onPress}>
         <Image 
           source={
