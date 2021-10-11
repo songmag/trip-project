@@ -1,0 +1,14 @@
+kafka:
+  url: localhost
+  port: 9092
+
+server:
+  port: 80
+  servlet:
+    encoding:
+      charset: UTF-8
+---
+test:
+  name: dev
+  age: 15
+  address: 50284-0283-0444
